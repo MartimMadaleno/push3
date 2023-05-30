@@ -39,6 +39,8 @@ int	is_correct_input(char **argv)
 		h = -1;
 		if (argv[i][0] == '-' || argv[i][0] == '+')
 				h++;
+		if(!argv[i][h + 1])
+			return (0);
 		while (argv[i][++h])
 		{
 			if (!ft_isdigit(argv[i][h]))
